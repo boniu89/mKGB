@@ -1,6 +1,6 @@
-package com.mkgb.user.model;
+package com.mkgb.sluchacz.model;
 
-public class User {
+public class Sluchacz {
 	
 	private long id;
 	private String imie;

@@ -3,7 +3,8 @@
 "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.mkgb.user.model.User" table="sluchacze" catalog="userdb">
+	<class name="com.mkgb.sluchacz.model.Sluchacz" table="sluchacze" 
+	catalog="sluchaczdb">
 		<id name = "id" type="long" column="slu_id">
 			<generator class="identity"/>
 		</id>

@@ -1,5 +1,5 @@
 package com.mkgb.sluchacz.dao;
 
-public class SluchaczDao {
+public abstract class SluchaczDao {
 
 }

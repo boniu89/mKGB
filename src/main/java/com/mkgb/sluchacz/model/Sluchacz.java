@@ -1,5 +1,9 @@
 package com.mkgb.sluchacz.model;
 
+import java.util.Set;
+
+import com.mkgb.zapis.model.Zapis;
+
 public class Sluchacz {
 	
 	private long id;
@@ -17,6 +21,8 @@ public class Sluchacz {
 	private String imieOpiekunaM;
 	private String imieOpiekunaK;
 	private Boolean aktywny;
+	
+	private Set<Zapis> zapisy;
 	
 	public long getId() {
 		return id;
@@ -108,6 +114,10 @@ public class Sluchacz {
 	public void setAktywny(Boolean aktywny) {
 		this.aktywny = aktywny;
 	}
-	
-	
+	public Set<Zapis> getZapisy() {
+		return zapisy;
+	}
+	public void setZapisy(Set<Zapis> zapisy) {
+		this.zapisy = zapisy;
+	}
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mkgb.sluchacz.model.Sluchacz" table="sluchacze" 
+	catalog="sluchaczdb">
+		<id name = "id" type="long" column="slu_id">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="imie" 
+				type="java.lang.String" 
+				column="slu_imie"/>
+		
+		<property name="drugieImie" 
+				type="java.lang.String" 
+				column="slu_drugie_imie"/>
+		
+		<property name="nazwisko" 
+				type="java.lang.String" 
+				column="slu_nazwisko"/>
+		
+		<property name="pesel" 
+				type="java.lang.String" 
+				column="slu_pesel"/>
+		
+		<property name="adresZamieszkania" 
+				type="java.lang.String" 
+				column="slu_adres_zamieszkania"/>
+				
+		<property name="adresKorespondencyjny" 
+				type="java.lang.String" 
+				column="slu_adres_korespondencyjny"/>
+				
+		<property name="imieMatki" 
+				type="java.lang.String" 
+				column="slu_imie_matki"/>
+				
+		<property name="imieOjca" 
+				type="java.lang.String" 
+				column="slu_imie_ojca"/>
+		
+		<property name="email" 
+				type="java.lang.String" 
+				column="slu_email"/>
+		
+		<property name="telefon" 
+				type="java.lang.String" 
+				column="slu_telefon"/>
+				
+		<property name="haslo" 
+				type="java.lang.String" 
+				column="slu_haslo"/>
+				
+		<property name="imieOpiekunaM" 
+				type="java.lang.String" 
+				column="slu_imie_opiekuna_M"/>
+				
+		<property name="imieOpiekunaK" 
+				type="java.lang.String" 
+				column="slu_imie_opiekuna_K"/>
+		
+	</class>
+</hibernate-mapping>

@@ -2,6 +2,7 @@ package com.mkgb.zapis.model;
 
 import java.util.Date;
 
+import com.mkgb.oferta.model.Oferta;
 import com.mkgb.sluchacz.model.Sluchacz;
 
 public class Zapis {
@@ -13,6 +14,7 @@ public class Zapis {
 	private Boolean aktywny;
 	
 	private Sluchacz sluchacz;
+	private Oferta oferta;
 
 	public long getId() {
 		return id;
@@ -68,5 +70,13 @@ public class Zapis {
 
 	public void setSluchacz(Sluchacz sluchacz) {
 		this.sluchacz = sluchacz;
+	}
+
+	public Oferta getOferta() {
+		return oferta;
+	}
+
+	public void setOferta(Oferta oferta) {
+		this.oferta = oferta;
 	}
 }

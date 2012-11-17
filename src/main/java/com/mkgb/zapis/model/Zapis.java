@@ -1,9 +1,11 @@
 package com.mkgb.zapis.model;
 
 import java.util.Date;
+import java.util.Set;
 
 import com.mkgb.oferta.model.Oferta;
-import com.mkgb.sluchacz.model.Sluchacz;
+import com.mkgb.rata.model.Rata;
+import com.mkgb.uzytkownik.model.Sluchacz;
 
 public class Zapis {
 	private long id;
@@ -14,7 +16,9 @@ public class Zapis {
 	private Boolean aktywny;
 	
 	private Sluchacz sluchacz;
+	private Sluchacz sluchaczPolecajacy;
 	private Oferta oferta;
+	private Set<Rata> raty;
 
 	public long getId() {
 		return id;
@@ -71,6 +75,14 @@ public class Zapis {
 	public void setSluchacz(Sluchacz sluchacz) {
 		this.sluchacz = sluchacz;
 	}
+	
+	public Sluchacz getSluchaczPolecajacy() {
+		return sluchaczPolecajacy;
+	}
+
+	public void setSluchaczPolecajacy(Sluchacz sluchaczPolecajacy) {
+		this.sluchaczPolecajacy = sluchaczPolecajacy;
+	}
 
 	public Oferta getOferta() {
 		return oferta;
@@ -78,5 +90,13 @@ public class Zapis {
 
 	public void setOferta(Oferta oferta) {
 		this.oferta = oferta;
+	}
+
+	public Set<Rata> getRaty() {
+		return raty;
+	}
+
+	public void setRaty(Set<Rata> raty) {
+		this.raty = raty;
 	}
 }

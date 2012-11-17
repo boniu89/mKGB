@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mkgb.zapis.model.Zapis" table="zapisy" 
+	catalog="zapisdb">
+		<id name = "id" type="long" column="zap_id">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="dataZapisu" 
+				type="java.util.Date" 
+				column="zap_data_zapisu"/>
+		
+		<property name="stan" 
+				type="java.lang.String" 
+				column="zap_stan"/>
+		
+		<property name="dataRezygnacji" 
+				type="java.util.Date" 
+				column="zap_data_rezygnacji"/>
+		
+		<property name="kontoBankowe" 
+				type="java.lang.String" 
+				column="zap_konto_bankowe"/>
+		
+		<property name="aktywna" 
+				type="java.lang.Boolean" 
+				column="zap_aktywny"/>
+				
+		<many-to-one name="sluchacz" class="com.mkgb.uzytkownik.model.Sluchacz">
+			<column name="zap_slu_id" not-null="true"/>
+		</many-to-one>
+		
+		<many-to-one name="sluchaczPolecajacy" class="com.mkgb.uzytkownik.model.Sluchacz">
+			<column name="zap_slu_polecajacy_id" not-null="true" />
+		</many-to-one>
+		
+		<many-to-one name="oferta" class="com.mkgb.oferta.model.Oferta">
+			<column name="zap_ofe_id" not-null="true"/>
+		</many-to-one>
+		
+		<set name="raty" table="raty" inverse="true" lazy="true" fetch="select">
+			<key column="rat_zap_id" not-null="true"/>
+			<one-to-many class="com.mkgb.rata.model.Rata"/>
+		</set>
+	</class>
+</hibernate-mapping>

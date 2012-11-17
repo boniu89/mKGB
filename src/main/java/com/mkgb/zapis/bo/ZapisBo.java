@@ -1,5 +1,5 @@
 package com.mkgb.zapis.bo;
 
-public abstract class ZapisBo {
+public interface ZapisBo {
 
 }

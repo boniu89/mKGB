@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mkgb.rata.model.Rata" table="raty" 
+	catalog="ratadb">
+		<id name = "id" type="long" column="rat_id">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="numerRaty" 
+				type="int" 
+				column="rat_nr_raty"/>
+		
+		<property name="kwota" 
+				type="java.math.BigDecimal" 
+				column="rat_kwota"/>
+		
+		<property name="dataPlatnosci" 
+				type="java.util.Date" 
+				column="rat_data_platnosci"/>
+		
+		<property name="aktywna" 
+				type="java.lang.Boolean" 
+				column="rat_aktywna"/>
+		
+		<many-to-one name="zapis" class="com.mkgb.zapis.model.Zapis">
+			<column name="rat_zap_id" not-null="true"/>
+		</many-to-one>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mkgb.wiadomosc.model.Wiadomosc" table="wiadomosci" 
+	catalog="wiadomoscdb">
+		<id name = "id" type="long" column="wia_id">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="tresc" 
+				type="java.lang.String" 
+				column="wia_tresc"/>
+		
+		<property name="aktywna"
+				type="java.lang.String"
+				column="wia_aktywna"/>
+				
+		<many-to-one name="pracownik" class="com.mkgb.uzytkownik.model.Pracownik">
+			<column name="wia_pra_id" not-null="true"/>
+		</many-to-one>
+				
+	</class>
+</hibernate-mapping>

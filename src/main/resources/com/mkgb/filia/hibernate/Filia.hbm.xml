@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mkgb.filia.model.Filia" table="filie" 
+	catalog="filiadb">
+		<id name = "id" type="long" column="fil_id">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="skrot" 
+				type="java.lang.String" 
+				column="fil_skrot"/>
+		
+		<property name="nazwa" 
+				type="java.lang.String" 
+				column="fil_nazwa"/>
+		
+		<property name="adres" 
+				type="java.lang.String" 
+				column="fil_adres"/>
+		
+		<property name="telefon" 
+				type="java.lang.String" 
+				column="fil_telefon"/>
+		
+		<property name="aktywna" 
+				type="java.lang.Boolean" 
+				column="fil_aktywna"/>
+				
+		<set name="oferty" table="oferty" inverse="true" lazy="true" fetch="select">
+			<key column name="ofe_fil_id" not-null="true"/>
+			<one-to-many class="com.mkgb.oferta.model.Oferta"/>
+		</set>
+		
+		<set name="pracownicy" table="pracownicy" inverse="true" lazy="true" fetch="select">
+			<key column name="pra_fil_id" not-null="true"/>
+			<one-to-many class="com.mkgb.uzytkownik.model.Pracownik"/>
+		</set>
+	</class>
+</hibernate-mapping>

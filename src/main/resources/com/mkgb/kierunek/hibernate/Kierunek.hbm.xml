@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mkgb.kierunek.model.Kierunek" table="kierunki" 
+	catalog="kierunekdb">
+		<id name = "id" type="long" column="kie_id">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="nazwa" 
+				type="java.lang.String" 
+				column="kie_nazwa"/>
+		
+		<property name="liczbaSemestrow" 
+				type="int" 
+				column="kie_liczba_semestrow"/>
+		
+		<property name="aktywny" 
+				type="java.lang.Boolean" 
+				column="kie_aktywny"/>
+		<set name="oferty" table="oferty" inverse="true" lazy="true" fetch="select">
+			<key column="ofe_kie_id" not-null="true"/>
+			<one-to-many class="com.mkgb.oferta.model.Oferta"/>
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,9 +1,11 @@
 package com.mkgb.oferta.model;
 
 import java.math.BigDecimal;
+import java.util.Set;
 
 import com.mkgb.filia.model.Filia;
 import com.mkgb.kierunek.model.Kierunek;
+import com.mkgb.zapis.model.Zapis;
 
 public class Oferta {
 	private long id;
@@ -14,6 +16,7 @@ public class Oferta {
 	
 	private Kierunek kierunek;
 	private Filia filia;
+	private Set<Zapis> zapisy;
 
 	public long getId() {
 		return id;
@@ -69,5 +72,13 @@ public class Oferta {
 
 	public void setFilia(Filia filia) {
 		this.filia = filia;
+	}
+
+	public Set<Zapis> getZapisy() {
+		return zapisy;
+	}
+
+	public void setZapisy(Set<Zapis> zapisy) {
+		this.zapisy = zapisy;
 	}
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mkgb.oferta.model.Oferta" table="oferty" 
+	catalog="ofertadb">
+		<id name = "id" type="long" column="ofe_id">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="rok" 
+				type="int" 
+				column="ofe_rok"/>
+		
+		<property name="nabor" 
+				type="java.lang.String" 
+				column="ofe_nabor"/>
+		
+		<property name="cena" 
+				type="java.math.BigDecimal" 
+				column="ofe_cena"/>
+		
+		<property name="aktywna" 
+				type="java.lang.Boolean" 
+				column="ofe_aktywna"/>
+				
+		<many-to-one name="filia" class="com.mkgb.filia.model.Filia">
+			<column name="ofe_fil_id" not-null="true"/>
+		</many-to-one>
+		
+		<many-to-one name="kierunek" class="com.mkgb.kierunek.model.Kierunek">
+			<column name="ofe_kie_id" not-null="true"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,12 +1,21 @@
 package com.mkgb.filia.model;
 
+import java.util.Set;
+
+import com.mkgb.oferta.model.Oferta;
+import com.mkgb.uzytkownik.model.Pracownik;
+
 public class Filia {
 	private long id;
 	private String skrot;
 	private String nazwa;
 	private String adres;
 	private String telefon;
-	private String aktywna;
+	private Boolean aktywna;
+	
+	private Set<Oferta> oferty;
+	private Set<Pracownik> pracownicy;
+	
 	public long getId() {
 		return id;
 	}
@@ -37,10 +46,22 @@ public class Filia {
 	public void setTelefon(String telefon) {
 		this.telefon = telefon;
 	}
-	public String getAktywna() {
+	public Boolean getAktywna() {
 		return aktywna;
 	}
-	public void setAktywna(String aktywna) {
+	public void setAktywna(Boolean aktywna) {
 		this.aktywna = aktywna;
+	}
+	public Set<Oferta> getOferty() {
+		return oferty;
+	}
+	public void setOferty(Set<Oferta> oferty) {
+		this.oferty = oferty;
+	}
+	public Set<Pracownik> getPracownicy() {
+		return pracownicy;
+	}
+	public void setPracownicy(Set<Pracownik> pracownicy) {
+		this.pracownicy = pracownicy;
 	}
 }

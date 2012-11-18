@@ -16,12 +16,12 @@ public class UzytkownikBoImpl implements UzytkownikBo {
 	
 	public void addUzytkownik(Uzytkownik uzytkownik) {
 		// TODO Auto-generated method stub
-		
+		uzytkownikDao.addUzytkownik(uzytkownik);
 	}
 
 	public List<Uzytkownik> findAllUzytkownicy() {
 		// TODO Auto-generated method stub
-		return null;
+		return uzytkownikDao.findAllUzytkownicy();
 	}
 
 }

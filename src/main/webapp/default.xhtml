@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+	  
+	  <h:body>
+	  
+	  <h2>Add New Customer</h2>
+ 		<h:form>
+ 
+ 			<h:panelGrid columns="3">
+ 
+				Name : 
+				<h:inputText id="name" value="#{uzytkownikRejestracja.imie}" 
+					size="20" required="true"
+					label="Name" >
+				</h:inputText>
+ 
+				<h:message for="name" style="color:red" />
+ 
+				Address : 
+				<h:inputTextarea id="address" value="#{uzytkownikRejestracja.adresZamieszkania}" 
+					cols="30" rows="10" required="true"
+					label="Address" >
+				</h:inputTextarea>
+ 
+				<h:message for="address" style="color:red" />
+ 
+			</h:panelGrid>
+ 
+			<h:commandButton value="Submit" action="#{uzytkownikRejestracja.addUzytkownik()}" />
+ 
+ 		</h:form>
+ 
+    </h:body>
+</html>

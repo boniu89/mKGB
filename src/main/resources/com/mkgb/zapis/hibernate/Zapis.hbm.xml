@@ -25,7 +25,7 @@
 				type="java.lang.String" 
 				column="zap_konto_bankowe"/>
 		
-		<property name="aktywna" 
+		<property name="aktywny" 
 				type="java.lang.Boolean" 
 				column="zap_aktywny"/>
 				

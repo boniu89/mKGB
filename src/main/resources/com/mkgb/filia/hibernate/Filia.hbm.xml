@@ -30,12 +30,12 @@
 				column="fil_aktywna"/>
 				
 		<set name="oferty" table="oferty" inverse="true" lazy="true" fetch="select">
-			<key column name="ofe_fil_id" not-null="true"/>
+			<key column="ofe_fil_id" not-null="true"/>
 			<one-to-many class="com.mkgb.oferta.model.Oferta"/>
 		</set>
 		
 		<set name="pracownicy" table="pracownicy" inverse="true" lazy="true" fetch="select">
-			<key column name="pra_fil_id" not-null="true"/>
+			<key column="pra_fil_id" not-null="true"/>
 			<one-to-many class="com.mkgb.uzytkownik.model.Pracownik"/>
 		</set>
 	</class>

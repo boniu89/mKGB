@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+	<application>
+		<el-resolver>
+			org.springframework.web.jsf.el.SpringBeanFacesELResolver
+		</el-resolver>
+	</application>
+
+	<managed-bean>
+		<managed-bean-name>uzytkownikRejestracja</managed-bean-name>
+		<managed-bean-class>com.mkgb.uzytkownik.UzytkownikBean</managed-bean-class>
+		<managed-property>
+			<property-name>uzytkownikBo</property-name>
+			<value>#{uzytkownikBo}</value>
+		</managed-property>
+	</managed-bean>
+
+</faces-config>

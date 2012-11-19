@@ -1,12 +1,13 @@
 package com.mkgb.uzytkownik.bo.impl;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.mkgb.uzytkownik.bo.UzytkownikBo;
 import com.mkgb.uzytkownik.dao.UzytkownikDao;
 import com.mkgb.uzytkownik.model.Uzytkownik;
 
-public class UzytkownikBoImpl implements UzytkownikBo {
+public class UzytkownikBoImpl implements UzytkownikBo, Serializable {
 
 	private UzytkownikDao uzytkownikDao;
 	

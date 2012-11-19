@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC 
 "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.mkgb.uzytkownik.model">
 	<class name="com.mkgb.uzytkownik.model.Uzytkownik" table="uzytkownicy" 
-	catalog="uzytkownikdb">
+	catalog="mkgb">
 		<id name = "id" type="long" column="uzy_id">
 			<generator class="identity"/>
 		</id>
@@ -54,7 +54,7 @@
 				column="uzy_haslo"/>
 				
 		<property name="aktywny"
-				type="java.lang.String"
+				type="java.lang.Boolean"
 				column="uzy_aktywny"/>
 				
 		<joined-subclass name="Sluchacz" extends="Uzytkownik">
@@ -85,7 +85,7 @@
 				<column name="pra_fil_id" not-null="true"/>
 			</many-to-one>
 			<set name="wiadomosci" table="wiadomosci" inverse="true" lazy="true" fetch="select">
-				<key column="wia_prac_id" not-null="true"/>
+				<key column="wia_pra_id" not-null="true"/>
 				<one-to-many class="com.mkgb.wiadomosc.model.Wiadomosc"/>
 			</set>
 		</joined-subclass>

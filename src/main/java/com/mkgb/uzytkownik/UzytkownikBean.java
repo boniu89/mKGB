@@ -9,6 +9,11 @@ import com.mkgb.uzytkownik.model.Uzytkownik;
 
 public class UzytkownikBean implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private UzytkownikBo uzytkownikBo;
 	
 	private String imie;
@@ -35,7 +40,7 @@ public class UzytkownikBean implements Serializable {
 	
 	public String addUzytkownik() {
 		
-		/*Sluchacz sluchacz = new Sluchacz();
+		Sluchacz sluchacz = new Sluchacz();
 		sluchacz.setImie(imie);
 		sluchacz.setDrugieImie(drugieImie);
 		sluchacz.setNazwisko(nazwisko);
@@ -51,24 +56,8 @@ public class UzytkownikBean implements Serializable {
 		sluchacz.setImieOpiekunaK(imieOpiekunaK);
 		sluchacz.setImieOpiekunaM(imieOpiekunaM);
 		sluchacz.setId(getUzytkownikList().size() + 1);
-		*/
-		
-		Sluchacz sluchacz = new Sluchacz();
-		sluchacz.setImie("Adrian");
-		sluchacz.setDrugieImie("Miko³aj");
-		sluchacz.setNazwisko("Maciej");
-		sluchacz.setPesel("99999999999");
-		sluchacz.setAdresZamieszkania("ul. 10/10");
-		sluchacz.setAdresKorespondencyjny("ul. 10/10");
-		sluchacz.setImieMatki("A");
-		sluchacz.setImieOjca("B");
-		sluchacz.setEmail("adrian.maciej@gmail.com");
-		sluchacz.setTelefon("987654321");
-		sluchacz.setHaslo("haslo");
-		sluchacz.setAktywny(true);
-		sluchacz.setImieOpiekunaK("A");
-		sluchacz.setImieOpiekunaM("B");
-		sluchacz.setId(1);
+
+		uzytkownikBo.addUzytkownik(sluchacz);
 		clearForm();
 		return "";
 	}

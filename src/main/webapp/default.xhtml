@@ -12,21 +12,109 @@
  
  			<h:panelGrid columns="3">
  
-				Name : 
-				<h:inputText id="name" value="#{uzytkownikRejestracja.imie}" 
+				Imię : 
+				<h:inputText id="imie" value="#{uzytkownikRejestracja.imie}" 
 					size="20" required="true"
-					label="Name" >
+					label="Imię" >
 				</h:inputText>
  
-				<h:message for="name" style="color:red" />
+				<h:message for="imie" style="color:red" />
+				
+				Drugie imię : 
+				<h:inputText id="drugieImie" value="#{uzytkownikRejestracja.drugieImie}" 
+					size="20" required="true"
+					label="Drugie imie" >
+				</h:inputText>
+				
+				<h:message for="drugieImie" style="color:red" />
+				
+				Nazwisko : 
+				<h:inputText id="nazwisko" value="#{uzytkownikRejestracja.nazwisko}" 
+					size="20" required="true"
+					label="Nazwisko" >
+				</h:inputText>
+				
+				<h:message for="nazwisko" style="color:red" />
+				
+				PESEL : 
+				<h:inputText id="pesel" value="#{uzytkownikRejestracja.pesel}" 
+					size="20" required="true"
+					label="PESEL" >
+				</h:inputText>
  
-				Address : 
-				<h:inputTextarea id="address" value="#{uzytkownikRejestracja.adresZamieszkania}" 
+				<h:message for="pesel" style="color:red" />
+ 
+				Adres zamieszkania : 
+				<h:inputTextarea id="adresZamieszkania" value="#{uzytkownikRejestracja.adresZamieszkania}" 
 					cols="30" rows="10" required="true"
-					label="Address" >
+					label="Adres zamieszkania" >
 				</h:inputTextarea>
  
-				<h:message for="address" style="color:red" />
+				<h:message for="adresZamieszkania" style="color:red" />
+				
+				Adres korespondencyjny : 
+				<h:inputTextarea id="adresKorespondencyjny" value="#{uzytkownikRejestracja.adresKorespondencyjny}" 
+					cols="30" rows="10" required="true"
+					label="Adres korespondencyjny" >
+				</h:inputTextarea>
+ 
+				<h:message for="adresKorespondencyjny" style="color:red" />
+				
+				Imię matki : 
+				<h:inputText id="imieMatki" value="#{uzytkownikRejestracja.imieMatki}" 
+					size="20" required="true"
+					label="Imię matki" >
+				</h:inputText>
+ 
+				<h:message for="imieMatki" style="color:red" />	
+				
+				Imię ojca : 
+				<h:inputText id="imieOjca" value="#{uzytkownikRejestracja.imieOjca}" 
+					size="20" required="true"
+					label="Imię ojca" >
+				</h:inputText>
+ 
+				<h:message for="imieOjca" style="color:red" />
+				
+				Adres e-mail : 
+				<h:inputText id="email" value="#{uzytkownikRejestracja.email}" 
+					size="20" required="true"
+					label="E-mail" >
+				</h:inputText>
+ 
+				<h:message for="email" style="color:red" />
+				
+				Telefon : 
+				<h:inputText id="telefon" value="#{uzytkownikRejestracja.telefon}" 
+					size="20" required="true"
+					label="Telefon" >
+				</h:inputText>
+ 
+				<h:message for="telefon" style="color:red" />
+				
+				Hasło : 
+				<h:inputText id="haslo" value="#{uzytkownikRejestracja.haslo}" 
+					size="20" required="true"
+					label="Hasło" >
+				</h:inputText>
+ 
+				<h:message for="haslo" style="color:red" />
+				
+				Imię opiekuna (Kobieta) : 
+				<h:inputText id="imieOpiekunaK" value="#{uzytkownikRejestracja.imieOpiekunaK}" 
+					size="20" required="true"
+					label="Imię opiekuna (Kobieta)" >
+				</h:inputText>
+ 
+				<h:message for="imieOpiekunaK" style="color:red" />
+				
+				Imię opiekuna (Mężczyzna) : 
+				<h:inputText id="imieOpiekunaM" value="#{uzytkownikRejestracja.imieOpiekunaM}" 
+					size="20" required="true"
+					label="Imię opiekuna (Mężczyzna)" >
+				</h:inputText>
+ 
+				<h:message for="imieOpiekunaM" style="color:red" />
  
 			</h:panelGrid>
  

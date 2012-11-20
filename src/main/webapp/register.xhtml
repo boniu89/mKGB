@@ -17,7 +17,7 @@
  			<h:panelGrid columns="3">
  
 				Imię: 
-				<h:inputText id="imie" value="#{uzytkownikRejestracja.imie}" 
+				<h:inputText id="imie" value="#{uzytkownikRejestracjaBean.imie}" 
 					size="20" required="true"
 					label="Imie" >
 				</h:inputText>
@@ -25,7 +25,7 @@
 				<h:message for="imie" style="color:red" />
 				
 				Drugie imię: 
-				<h:inputText id="drugieImie" value="#{uzytkownikRejestracja.drugieImie}" 
+				<h:inputText id="drugieImie" value="#{uzytkownikRejestracjaBean.drugieImie}" 
 					size="20" required="false"
 					label="Drugie imie" >
 				</h:inputText>
@@ -33,7 +33,7 @@
 				<h:message for="drugieImie" style="color:red" />
 				
 				Nazwisko: 
-				<h:inputText id="nazwisko" value="#{uzytkownikRejestracja.nazwisko}" 
+				<h:inputText id="nazwisko" value="#{uzytkownikRejestracjaBean.nazwisko}" 
 					size="20" required="true"
 					label="Nazwisko" >
 				</h:inputText>
@@ -41,7 +41,7 @@
 				<h:message for="nazwisko" style="color:red" />
 				
 				PESEL: 
-				<h:inputText id="pesel" value="#{uzytkownikRejestracja.pesel}" 
+				<h:inputText id="pesel" value="#{uzytkownikRejestracjaBean.pesel}" 
 					size="20" required="true"
 					label="PESEL" >
 				</h:inputText>
@@ -49,7 +49,7 @@
 				<h:message for="pesel" style="color:red" />
  
 				Adres zamieszkania: 
-				<h:inputTextarea id="adresZamieszkania" value="#{uzytkownikRejestracja.adresZamieszkania}" 
+				<h:inputTextarea id="adresZamieszkania" value="#{uzytkownikRejestracjaBean.adresZamieszkania}" 
 					cols="30" rows="10" required="true"
 					label="Adres zamieszkania" >
 				</h:inputTextarea>
@@ -57,7 +57,7 @@
 				<h:message for="adresZamieszkania" style="color:red" />
 				
 				Adres do korespondencji: 
-				<h:inputTextarea id="adresKorespondencyjny" value="#{uzytkownikRejestracja.adresKorespondencyjny}" 
+				<h:inputTextarea id="adresKorespondencyjny" value="#{uzytkownikRejestracjaBean.adresKorespondencyjny}" 
 					cols="30" rows="10" required="true"
 					label="Adres korespondencyjny" >
 				</h:inputTextarea>
@@ -65,7 +65,7 @@
 				<h:message for="adresKorespondencyjny" style="color:red" />
 				
 				Imię matki: 
-				<h:inputText id="imieMatki" value="#{uzytkownikRejestracja.imieMatki}" 
+				<h:inputText id="imieMatki" value="#{uzytkownikRejestracjaBean.imieMatki}" 
 					size="20" required="true"
 					label="Imie matki" >
 				</h:inputText>
@@ -73,7 +73,7 @@
 				<h:message for="imieMatki" style="color:red" />	
 				
 				Imię ojca: 
-				<h:inputText id="imieOjca" value="#{uzytkownikRejestracja.imieOjca}" 
+				<h:inputText id="imieOjca" value="#{uzytkownikRejestracjaBean.imieOjca}" 
 					size="20" required="true"
 					label="Imie ojca" >
 				</h:inputText>
@@ -81,7 +81,7 @@
 				<h:message for="imieOjca" style="color:red" />
 				
 				Adres e-mail: 
-				<h:inputText id="email" value="#{uzytkownikRejestracja.email}" 
+				<h:inputText id="email" value="#{uzytkownikRejestracjaBean.email}" 
 					size="20" required="true"
 					label="E-mail" >
 				</h:inputText>
@@ -89,7 +89,7 @@
 				<h:message for="email" style="color:red" />
 				
 				Telefon: 
-				<h:inputText id="telefon" value="#{uzytkownikRejestracja.telefon}" 
+				<h:inputText id="telefon" value="#{uzytkownikRejestracjaBean.telefon}" 
 					size="20" required="true"
 					label="Telefon" >
 				</h:inputText>
@@ -97,7 +97,7 @@
 				<h:message for="telefon" style="color:red" />
 				
 				Hasło: 
-				<h:inputText id="haslo" value="#{uzytkownikRejestracja.haslo}" 
+				<h:inputText id="haslo" value="#{uzytkownikRejestracjaBean.haslo}" 
 					size="20" required="true"
 					label="Haslo" >
 				</h:inputText>
@@ -105,7 +105,7 @@
 				<h:message for="haslo" style="color:red" />
 				
 				Imię opiekuna (Kobieta) : 
-				<h:inputText id="imieOpiekunaK" value="#{uzytkownikRejestracja.imieOpiekunaK}" 
+				<h:inputText id="imieOpiekunaK" value="#{uzytkownikRejestracjaBean.imieOpiekunaK}" 
 					size="20" required="true"
 					label="Imie opiekuna (Kobieta)" >
 				</h:inputText>
@@ -113,7 +113,7 @@
 				<h:message for="imieOpiekunaK" style="color:red" />
 				
 				Imię opiekuna (Mężczyzna) : 
-				<h:inputText id="imieOpiekunaM" value="#{uzytkownikRejestracja.imieOpiekunaM}" 
+				<h:inputText id="imieOpiekunaM" value="#{uzytkownikRejestracjaBean.imieOpiekunaM}" 
 					size="20" required="true"
 					label="Imie opiekuna (Mezczyzna)" >
 				</h:inputText>
@@ -122,7 +122,7 @@
  
 			</h:panelGrid>
  
-			<h:commandButton class ="buttons" value="Zarejestruj" action="#{uzytkownikRejestracja.addUzytkownik()}" />
+			<h:commandButton class ="buttons" value="Zarejestruj" action="#{uzytkownikRejestracjaBean.addUzytkownik()}" />
  
 		</h:form>
             </ui:define>

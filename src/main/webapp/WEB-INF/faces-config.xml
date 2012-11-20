@@ -13,8 +13,8 @@
 	</application>
 
 	<managed-bean>
-		<managed-bean-name>uzytkownikRejestracja</managed-bean-name>
-		<managed-bean-class>com.mkgb.uzytkownik.UzytkownikBean</managed-bean-class>
+		<managed-bean-name>uzytkownikRejestracjaBean</managed-bean-name>
+		<managed-bean-class>com.mkgb.uzytkownik.UzytkownikRejestracjaBean</managed-bean-class>
 		<managed-bean-scope>view</managed-bean-scope>
 		<managed-property>
 			<property-name>uzytkownikBo</property-name>
@@ -22,8 +22,8 @@
 		</managed-property>
 	</managed-bean>
     <managed-bean>
-        <managed-bean-name>userLoginBean</managed-bean-name>
-        <managed-bean-class>com.mkgb.uzytkownik.UserLoginBean</managed-bean-class>
+        <managed-bean-name>uzytkownikLogowanieBean</managed-bean-name>
+        <managed-bean-class>com.mkgb.uzytkownik.UzytkownikLogowanieBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 </faces-config>

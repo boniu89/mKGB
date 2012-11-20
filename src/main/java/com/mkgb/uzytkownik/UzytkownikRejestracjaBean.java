@@ -7,7 +7,7 @@ import com.mkgb.uzytkownik.bo.UzytkownikBo;
 import com.mkgb.uzytkownik.model.Sluchacz;
 import com.mkgb.uzytkownik.model.Uzytkownik;
 
-public class UzytkownikBean implements Serializable {
+public class UzytkownikRejestracjaBean implements Serializable {
 	
 	/**
 	 * 

@@ -14,21 +14,21 @@
                 <h:form>
 
 		<h:panelGrid columns="2" columnClasses="column" cellpadding="5"
-                             rendered="#{userLoginBean.loginCorrect == false}">
+                             rendered="#{uzytkownikLogowanieBean.loginCorrect == false}">
                     
 		<h:outputText value="Login"/>
-                <h:inputText value="#{userLoginBean.login}"/>
+                <h:inputText value="#{uzytkownikLogowanieBean.login}"/>
                 
 		<h:outputText value="Hasło"/>
                 
-                <h:inputSecret value="#{userLoginBean.password}"/>
+                <h:inputSecret value="#{uzytkownikLogowanieBean.password}"/>
                 
-                <h:commandButton class ="buttons" value="Zaloguj" action="#{userLoginBean.login()}"/>
+                <h:commandButton class ="buttons" value="Zaloguj" action="#{uzytkownikLogowanieBean.login()}"/>
                 
 		</h:panelGrid>
 
 		<h:outputText value="Jesteś już zalogowany!"
-                              rendered="#{userLoginBean.loginCorrect == true}"/>
+                              rendered="#{uzytkownikLogowanieBean.loginCorrect == true}"/>
 
 		</h:form>
             </ui:define>

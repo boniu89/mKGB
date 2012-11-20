@@ -19,11 +19,31 @@
 		<managed-property>
 			<property-name>uzytkownikBo</property-name>
 			<value>#{uzytkownikBo}</value>
-		</managed-property>
+		</managed-property> 
 	</managed-bean>
-    <managed-bean>
+	
+	<managed-bean>
         <managed-bean-name>uzytkownikLogowanieBean</managed-bean-name>
         <managed-bean-class>com.mkgb.uzytkownik.UzytkownikLogowanieBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>zapisRejestracjaBean</managed-bean-name> 
+		<managed-bean-class>com.mkgb.zapis.ZapisRejestracjaBean</managed-bean-class>
+		<managed-bean-scope>view</managed-bean-scope>
+		<managed-property>
+			<property-name>zapisBo</property-name>
+			<value>#{zapisBo}</value>
+		</managed-property> 
+		<managed-property>
+			<property-name>ofertaBo</property-name><!-- ustawienia -->
+			<value>#{ofertaBo}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>uzytkownikBo</property-name>
+			<value>#{uzytkownikBo}</value>
+		</managed-property> 
+	</managed-bean>
+    
 </faces-config>

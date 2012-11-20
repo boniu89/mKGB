@@ -1,5 +1,8 @@
 package com.mkgb.oferta.dao;
 
-public interface OfertaDao {
+import com.mkgb.oferta.model.Oferta;
 
+public interface OfertaDao {
+	
+	public Oferta getOfertaById(long id);
 }

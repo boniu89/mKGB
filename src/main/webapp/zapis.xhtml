@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+	  
+	  <h:body>
+	  
+	  <h2>Dodaj nowy zapis</h2>
+ 		<h:form>
+ 
+ 			<h:panelGrid columns="3">
+ 
+				id sluchacza : 
+				<h:inputText id="idSluchacz" value="#{zapisRejestracjaBean.sluchaczId}" 
+					size="20" required="true"
+					label="idSluchacz" >
+				</h:inputText>
+ 
+				<h:message for="idSluchacz" style="color:red" />
+				
+				id oferty : 
+				<h:inputText id="idOferta" value="#{zapisRejestracjaBean.ofertaId}" 
+					size="20" required="true"
+					label="idOferta" >
+				</h:inputText>
+				
+				<h:message for="idOferta" style="color:red" />
+				
+				id polecajacego : 
+				<h:inputText id="idPolecajacy" value="#{zapisRejestracjaBean.polecajacyId}" 
+					size="20" required="true"
+					label="idPolecajacy" >
+				</h:inputText>
+				
+				<h:message for="idPolecajacy" style="color:red" />
+ 
+			</h:panelGrid>
+ 
+			<h:commandButton value="Submit" action="#{zapisRejestracjaBean.addZapis()}" />
+ 
+ 		</h:form>
+ 
+    </h:body>
+</html>

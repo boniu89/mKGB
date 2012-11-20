@@ -7,4 +7,6 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<import resource="classes/config/spring/beans/HibernateSessionFactory.xml"/>
 	
 	<import resource="classes/com/mkgb/uzytkownik/spring/UzytkownikBean.xml"/>
+	<import resource="classes/com/mkgb/oferta/spring/OfertaBean.xml"/>
+	<import resource="classes/com/mkgb/zapis/spring/ZapisBean.xml"/>
 </beans>

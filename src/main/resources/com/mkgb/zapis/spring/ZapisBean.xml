@@ -1,1 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+		
+		<bean id="zapisBo"
+			class="com.mkgb.zapis.bo.impl.ZapisBoImpl">
+			<property name="zapisDao" ref="zapisDao"/>
+		</bean>
+		
+		<bean id="zapisDao"
+			class="com.mkgb.zapis.dao.impl.ZapisDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory" />	
+		</bean>
+</beans>

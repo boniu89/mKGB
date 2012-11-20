@@ -13,13 +13,31 @@
 	</application>
 
 	<managed-bean>
-		<managed-bean-name>uzytkownikRejestracja</managed-bean-name>
-		<managed-bean-class>com.mkgb.uzytkownik.UzytkownikBean</managed-bean-class>
-		<managed-bean-scope>view</managed-bean-scope>
+		<managed-bean-name>uzytkownikRejestracja</managed-bean-name> <!--nazwa jaka chcesz sie poslugiwac w jsf -->
+		<managed-bean-class>com.mkgb.uzytkownik.UzytkownikBean</managed-bean-class><!-- bean do ktorego to sie odwoluje-->
+		<managed-bean-scope>view</managed-bean-scope><!-- zakres w jakim to sie dzijee-->
 		<managed-property>
-			<property-name>uzytkownikBo</property-name>
-			<value>#{uzytkownikBo}</value>
-		</managed-property>
+			<property-name>uzytkownikBo</property-name><!-- ustawienia -->
+			<value>#{uzytkownikBo}</value><!-- ze ma przypisac do obiektu uzytkownikBo - bean uzytkownikBo, ktory jest w-->
+		</managed-property> <!--resource.com.mkgb.uzytkownik.bean.UzytkownikBean.xml-->
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>zapisRejestracjaBean</managed-bean-name> <!--nazwa jaka chcesz sie poslugiwac w jsf -->
+		<managed-bean-class>com.mkgb.zapis.ZapisRejestracjaBean</managed-bean-class><!-- bean do ktorego to sie odwoluje-->
+		<managed-bean-scope>view</managed-bean-scope><!-- zakres w jakim to sie dzijee-->
+		<managed-property>
+			<property-name>zapisBo</property-name><!-- ustawienia -->
+			<value>#{zapisBo}</value><!-- ze ma przypisac do obiektu uzytkownikBo - bean uzytkownikBo, ktory jest w-->
+		</managed-property> <!--resource.com.mkgb.uzytkownik.bean.UzytkownikBean.xml-->
+		<managed-property>
+			<property-name>ofertaBo</property-name><!-- ustawienia -->
+			<value>#{ofertaBo}</value><!-- ze ma przypisac do obiektu uzytkownikBo - bean uzytkownikBo, ktory jest w-->
+		</managed-property> <!--resource.com.mkgb.uzytkownik.bean.UzytkownikBean.xml-->
+		<managed-property>
+			<property-name>uzytkownikBo</property-name><!-- ustawienia -->
+			<value>#{uzytkownikBo}</value><!-- ze ma przypisac do obiektu uzytkownikBo - bean uzytkownikBo, ktory jest w-->
+		</managed-property> <!--resource.com.mkgb.uzytkownik.bean.UzytkownikBean.xml-->
 	</managed-bean>
 
 </faces-config>

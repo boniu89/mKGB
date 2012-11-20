@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.mkgb.uzytkownik.bo.UzytkownikBo;
 import com.mkgb.uzytkownik.dao.UzytkownikDao;
+import com.mkgb.uzytkownik.model.Sluchacz;
 import com.mkgb.uzytkownik.model.Uzytkownik;
 
 @Transactional(readOnly = true)
@@ -29,6 +30,16 @@ public class UzytkownikBoImpl implements UzytkownikBo, Serializable {
 	@Transactional(readOnly = false)
 	public List<Uzytkownik> findAllUzytkownicy() {
 		return uzytkownikDao.findAllUzytkownicy();
+	}
+
+	@Override
+	public Uzytkownik getUzytkownikById(long id) {
+		return uzytkownikDao.getUzytkownikById(id);
+	}
+	
+	@Override
+	public Sluchacz getSluchaczById(long id) {
+		return uzytkownikDao.getSluchaczById(id);
 	}
 
 }

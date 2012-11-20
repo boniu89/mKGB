@@ -11,6 +11,9 @@ import com.mkgb.zapis.model.Zapis;
 
 public class ZapisRejestracjaBean implements Serializable {
 
+
+	private static final long serialVersionUID = 1L;
+	
 	private ZapisBo zapisBo;
 	private OfertaBo ofertaBo;
 	private UzytkownikBo uzytkownikBo;

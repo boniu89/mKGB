@@ -24,14 +24,18 @@
                 <h:form>  
                     
                     <h3>Witaj
-                        <h:outputLabel value="Nieznajomy" rendered="#{userLoginBean.loginCorrect == false}"/>
-                        <h:outputLabel value="#{userLoginBean.login}" rendered="#{userLoginBean.loginCorrect == true}"/>
+                        <h:outputLabel value="Nieznajomy" rendered="#{uzytkownikLogowanieBean.loginCorrect == false}"/>
+                        <h:outputLabel value="#{uzytkownikLogowanieBean.login}" rendered="#{uzytkownikLogowanieBean.loginCorrect == true}"/>
                     !</h3>  		  
                 </h:form>
             <ul>
-                <h:outputLabel rendered="#{userLoginBean.loginCorrect == false}"><li><a href="login.xhtml">Zaloguj</a></li></h:outputLabel> 
-                <h:outputLabel rendered="#{userLoginBean.loginCorrect == false}"><li><a href="register.xhtml">Zarejestruj</a></li></h:outputLabel> 
-            </ul>
+                <h:outputLabel rendered="#{uzytkownikLogowanieBean.loginCorrect == false}"><li><a href="login.xhtml">Zaloguj</a></li></h:outputLabel> 
+                <h:outputLabel rendered="#{uzytkownikLogowanieBean.loginCorrect == false}"><li><a href="register.xhtml">Zarejestruj</a></li></h:outputLabel> 
+                <h:outputLabel rendered="#{uzytkownikLogowanieBean.loginCorrect == true}"><li><a href="myCourses.xhtml">Moje kursy</a></li></h:outputLabel> 
+                <h:outputLabel rendered="#{uzytkownikLogowanieBean.loginCorrect == true}"><li><a href="profil.xhtml">Mój profil</a></li></h:outputLabel> 
+                <h:outputLabel rendered="#{uzytkownikLogowanieBean.loginCorrect == true}"><li><a href="billings.xhtml">Moje płatności</a></li></h:outputLabel> 
+                <h:outputLabel rendered="#{uzytkownikLogowanieBean.loginCorrect == true}"><li><a href="courses.xhtml">Zapisy na kursy</a></li></h:outputLabel> 
+                </ul>
 
             </div>
         </div>

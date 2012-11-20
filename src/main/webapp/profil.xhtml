@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="format.css" />
+        <title>Facelets Template</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="template.xhtml">
+            <ui:define name="ui_right">
+                <h:form>
+                    <h1 rendered="#{uzytkownikLogowanieBean.loginCorrect == true}">Mój profil</h1>
+                    <h:panelGrid columns="2" columnClasses="column" cellpadding="15" cellspacing="20"
+                             rendered="#{uzytkownikLogowanieBean.loginCorrect == true}">
+
+                    <h:outputText class="labelText" value="Imię"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.imie}"/>
+                    
+                    <h:outputText class="labelText" value="Drugie imię"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.drugieImie}"/>
+                    
+                    <h:outputText class="labelText" value="Nazwisko"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.nazwisko}"/>
+                    
+                    <h:outputText class="labelText" value="Adres e-mail"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.email}"/>
+                    
+                    <h:outputText class="labelText" value="PESEL"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.pesel}"/>
+                    
+                    <h:outputText class="labelText" value="Telefon"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.telefon}"/>
+                    
+                    <h:outputText class="labelText" value="Imię ojca"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.imieOjca}"/>
+                    
+                    <h:outputText class="labelText" value="Imię matki"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.imieMatki}"/>
+                    
+                    <h:outputText class="labelText" value="Adres zamieszkania"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.adresZamieszkania}"/>
+                    
+                    <h:outputText class="labelText" value="Adres do korespondencji"/>
+                    <h:outputText class="profilText" value="#{uzytkownikLogowanieBean.user.adresKorespondencyjny}"/>
+                    
+                
+		</h:panelGrid>
+
+		<h:outputText value="Musisz być zalogowany, żeby przeglądać tę stronę!"
+                              rendered="#{uzytkownikLogowanieBean.loginCorrect == false}"/>
+
+		</h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,38 +1,34 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"  
-      xmlns:h="http://java.sun.com/jsf/html" 
-      xmlns:ui="http://java.sun.com/jsf/facelets"> 
-    <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="format.css" />
-        <title>Facelets Template</title>
-    </h:head>
-    <h:body>
-        <ui:composition template="template.xhtml">
-            <ui:define name="ui_right">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+	  
+	  <h:body>
+	  
+	  <h2>Add New Customer</h2>
  		<h:form>
  
  			<h:panelGrid columns="3">
  
-				Imię: 
+				Imię : 
 				<h:inputText id="imie" value="#{uzytkownikRejestracja.imie}" 
 					size="20" required="true"
-					label="Imie" >
+					label="Imię" >
 				</h:inputText>
  
 				<h:message for="imie" style="color:red" />
 				
-				Drugie imię: 
+				Drugie imię : 
 				<h:inputText id="drugieImie" value="#{uzytkownikRejestracja.drugieImie}" 
-					size="20" required="false"
+					size="20" required="true"
 					label="Drugie imie" >
 				</h:inputText>
 				
 				<h:message for="drugieImie" style="color:red" />
 				
-				Nazwisko: 
+				Nazwisko : 
 				<h:inputText id="nazwisko" value="#{uzytkownikRejestracja.nazwisko}" 
 					size="20" required="true"
 					label="Nazwisko" >
@@ -40,7 +36,7 @@
 				
 				<h:message for="nazwisko" style="color:red" />
 				
-				PESEL: 
+				PESEL : 
 				<h:inputText id="pesel" value="#{uzytkownikRejestracja.pesel}" 
 					size="20" required="true"
 					label="PESEL" >
@@ -48,7 +44,7 @@
  
 				<h:message for="pesel" style="color:red" />
  
-				Adres zamieszkania: 
+				Adres zamieszkania : 
 				<h:inputTextarea id="adresZamieszkania" value="#{uzytkownikRejestracja.adresZamieszkania}" 
 					cols="30" rows="10" required="true"
 					label="Adres zamieszkania" >
@@ -56,7 +52,7 @@
  
 				<h:message for="adresZamieszkania" style="color:red" />
 				
-				Adres do korespondencji: 
+				Adres korespondencyjny : 
 				<h:inputTextarea id="adresKorespondencyjny" value="#{uzytkownikRejestracja.adresKorespondencyjny}" 
 					cols="30" rows="10" required="true"
 					label="Adres korespondencyjny" >
@@ -64,23 +60,23 @@
  
 				<h:message for="adresKorespondencyjny" style="color:red" />
 				
-				Imię matki: 
+				Imię matki : 
 				<h:inputText id="imieMatki" value="#{uzytkownikRejestracja.imieMatki}" 
 					size="20" required="true"
-					label="Imie matki" >
+					label="Imię matki" >
 				</h:inputText>
  
 				<h:message for="imieMatki" style="color:red" />	
 				
-				Imię ojca: 
+				Imię ojca : 
 				<h:inputText id="imieOjca" value="#{uzytkownikRejestracja.imieOjca}" 
 					size="20" required="true"
-					label="Imie ojca" >
+					label="Imię ojca" >
 				</h:inputText>
  
 				<h:message for="imieOjca" style="color:red" />
 				
-				Adres e-mail: 
+				Adres e-mail : 
 				<h:inputText id="email" value="#{uzytkownikRejestracja.email}" 
 					size="20" required="true"
 					label="E-mail" >
@@ -88,7 +84,7 @@
  
 				<h:message for="email" style="color:red" />
 				
-				Telefon: 
+				Telefon : 
 				<h:inputText id="telefon" value="#{uzytkownikRejestracja.telefon}" 
 					size="20" required="true"
 					label="Telefon" >
@@ -96,10 +92,10 @@
  
 				<h:message for="telefon" style="color:red" />
 				
-				Hasło: 
+				Hasło : 
 				<h:inputText id="haslo" value="#{uzytkownikRejestracja.haslo}" 
 					size="20" required="true"
-					label="Haslo" >
+					label="Hasło" >
 				</h:inputText>
  
 				<h:message for="haslo" style="color:red" />
@@ -107,7 +103,7 @@
 				Imię opiekuna (Kobieta) : 
 				<h:inputText id="imieOpiekunaK" value="#{uzytkownikRejestracja.imieOpiekunaK}" 
 					size="20" required="true"
-					label="Imie opiekuna (Kobieta)" >
+					label="Imię opiekuna (Kobieta)" >
 				</h:inputText>
  
 				<h:message for="imieOpiekunaK" style="color:red" />
@@ -115,17 +111,16 @@
 				Imię opiekuna (Mężczyzna) : 
 				<h:inputText id="imieOpiekunaM" value="#{uzytkownikRejestracja.imieOpiekunaM}" 
 					size="20" required="true"
-					label="Imie opiekuna (Mezczyzna)" >
+					label="Imię opiekuna (Mężczyzna)" >
 				</h:inputText>
  
 				<h:message for="imieOpiekunaM" style="color:red" />
  
 			</h:panelGrid>
  
-			<h:commandButton class ="buttons" value="Zarejestruj" action="#{uzytkownikRejestracja.addUzytkownik()}" />
+			<h:commandButton value="Submit" action="#{uzytkownikRejestracja.addUzytkownik()}" />
  
-		</h:form>
-            </ui:define>
-        </ui:composition>
+ 		</h:form>
+ 
     </h:body>
 </html>

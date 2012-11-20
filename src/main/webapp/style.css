@@ -45,3 +45,5 @@ line-height: 12px;
 #footer { font-size: 11px; text-align: center; border-top: 1px solid #ccc; padding: 10px 5px; }
 
 .buttons { padding:5px; }
+
+.labelText { font-size: 1.3em; font-weight: bold; }
